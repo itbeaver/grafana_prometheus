@@ -1,5 +1,4 @@
 FROM prom/prometheus:latest
-LABEL maintainer="Your Name <your.email@example.com>"
 
 VOLUME [ "/prometheus" ]
 WORKDIR /prometheus
@@ -14,7 +13,6 @@ CMD [ "--config.file=/etc/prometheus/prometheus.yml", \
 EXPOSE 9090
 
 FROM grafana/grafana:latest
-LABEL maintainer="Your Name <your.email@example.com>"
 
 VOLUME [ "/var/lib/grafana", "/etc/grafana", "/var/log/grafana" ]
 
