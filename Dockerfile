@@ -15,6 +15,7 @@ EXPOSE 9090
 FROM grafana/grafana:latest
 
 VOLUME [ "/var/lib/grafana", "/etc/grafana", "/var/log/grafana" ]
+COPY config/grafana.ini /etc/grafana/grafana.ini
 
 EXPOSE 3000
 
