@@ -3,7 +3,7 @@ LABEL maintainer="Your Name <your.email@example.com>"
 
 VOLUME [ "/prometheus" ]
 WORKDIR /prometheus
-COPY prometheus.yml /etc/prometheus/prometheus.yml
+COPY config/prometheus.yml /etc/prometheus/prometheus.yml
 
 ENTRYPOINT [ "/bin/prometheus" ]
 CMD [ "--config.file=/etc/prometheus/prometheus.yml", \
